@@ -11,6 +11,7 @@ where
 {
     cfg_if! {
         if #[cfg(target_arch = "wasm32")] {
+            gloo_console::log!("spawning wasm future");
             wasm_bindgen_futures::spawn_local(fut)
         }
         else if #[cfg(any(test, doctest))] {

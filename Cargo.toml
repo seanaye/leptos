@@ -16,8 +16,9 @@ members = [
   # libraries
   "meta",
   "router",
+
 ]
-exclude = ["benchmarks", "examples"]
+exclude = ["benchmarks", "examples", "repro"]
 
 [workspace.package]
 version = "0.2.0-alpha2"
