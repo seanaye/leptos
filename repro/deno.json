@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "start": "deno run -A main.ts"
+    "wasmbuild:server": "deno run -A https://deno.land/x/wasmbuild@0.10.4/main.ts -p server",
+    "wasmbuild:client":  "deno run -A https://deno.land/x/wasmbuild@0.10.4/main.ts -p client",
+    "wasmbuild": "deno task wasmbuild:server & deno task wasmbuild:client",
+  }
+}

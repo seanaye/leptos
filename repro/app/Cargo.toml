@@ -1,0 +1,22 @@
+[package]
+name = "app"
+authors = [""]
+edition = "2021"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+leptos = { path = "../../leptos/", default-features = false }
+web-sys = { version = "0.3.61", features = ["AbortController"] }
+gloo-net = { git = "https://github.com/seanaye/gloo", branch = "seanaye/feat/serverside-http" }
+serde = { version = "1.0.152", features = ["derive"] }
+log = "0.4.17"
+gloo-console = "0.2.3"
+
+
+[features]
+default = ["hydrate"]
+ssr = ["leptos/ssr"]
+hydrate = ["leptos/hydrate"]
